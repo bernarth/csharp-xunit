@@ -1,9 +1,9 @@
-﻿using ProductFactoryApp.Abstracts;
+﻿namespace ProductFactoryApp;
+
+using ProductFactoryApp.Abstracts;
 using ProductFactoryApp.Core;
 using ProductFactoryApp.Enums;
 using ProductFactoryApp.Interfaces;
-
-namespace ProductFactoryApp;
 
 public class Program
 {
@@ -29,6 +29,8 @@ public class Program
 
         orderService.AddProduct(book);
         orderService.AddProduct(electronics);
+        inventoryService.RemoveProduct(book, 1);
+        inventoryService.RemoveProduct(electronics, 1);
 
         Console.WriteLine("\nOrder:");
         foreach (var product in orderService.GetProducts())

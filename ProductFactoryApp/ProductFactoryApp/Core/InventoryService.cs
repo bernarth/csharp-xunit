@@ -1,8 +1,8 @@
 ﻿namespace ProductFactoryApp.Core;
 
-using ProductFactoryApp.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using ProductFactoryApp.Interfaces;
 
 public class InventoryService : IInventoryService
 {
